@@ -1,12 +1,17 @@
-// app/page.tsx
-import HeroSection from '@/components/HeroSection';
-import FeatureSection from '@/components/FeatureSection';
+import Hero from '@/components/Hero';
+import Services from '@/components/Services';
+import About from '@/components/About';
+import Contact from '@/components/Contact';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
-    <div>
-      <HeroSection />
-      <FeatureSection />
-    </div>
+    <main className="bg-black text-white">
+      <Hero />
+      <Services />
+      <About />
+      <Contact />
+      <Footer />
+    </main>
   );
 }

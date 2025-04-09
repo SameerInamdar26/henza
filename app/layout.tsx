@@ -1,16 +1,15 @@
-import './globals.css'; // correct path when in same folder
-
+import '@/styles/globals.css';
 import { ReactNode } from 'react';
 
 export const metadata = {
   title: 'Neurobyte | IT Solutions Company',
-  description: 'Empowering Tech With Neurobyte',
+  description: 'Empowering Tech with Cutting-Edge Solutions',
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body className="min-h-screen bg-black text-white font-sans antialiased">
+      <body className="min-h-screen bg-black text-white antialiased font-sans">
         {children}
       </body>
     </html>
