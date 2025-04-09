@@ -1,4 +1,5 @@
-import '../styles/globals.css';
+import './globals.css'; // correct path when in same folder
+
 import { ReactNode } from 'react';
 
 export const metadata = {
