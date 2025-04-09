@@ -1,23 +1,16 @@
 import '../styles/globals.css';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+import { ReactNode } from 'react';
 
 export const metadata = {
   title: 'Neurobyte | IT Solutions Company',
-  description: 'Tech-powered IT services to level up your business.',
+  description: 'Empowering Tech With Neurobyte',
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body className="bg-black text-white font-sans">
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
+      <body className="min-h-screen bg-white text-black antialiased">
+        {children}
       </body>
     </html>
   );
