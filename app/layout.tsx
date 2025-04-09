@@ -1,25 +1,26 @@
-import './globals.css'
-import { ReactNode } from 'react'
-import { Inter } from 'next/font/google'
-import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
+// app/layout.tsx
+import './globals.css';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
+import type { Metadata } from 'next';
 
-const inter = Inter({ subsets: ['latin'] })
+export const metadata: Metadata = {
+  title: 'Neurobyte',
+  description: 'Tech-driven IT solutions by Neurobyte',
+};
 
-export const metadata = {
-  title: 'Neurobyte | Innovative IT Solutions',
-  description: 'Delivering smart, scalable, and secure tech for the future.',
-}
-
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
         <Navbar />
-        <main className="min-h-screen">{children}</main>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>
-  )
+  );
 }
- 
