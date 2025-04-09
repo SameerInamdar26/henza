@@ -1,8 +1,8 @@
+// components/Footer.tsx
 export default function Footer() {
-    return (
-      <footer className="bg-gray-900 text-white text-center py-6">
-        <p>&copy; {new Date().getFullYear()} Neurobyte. All rights reserved.</p>
-      </footer>
-    )
-  }
-   
+  return (
+    <footer className="bg-gray-100 p-4 text-center text-gray-600">
+      © {new Date().getFullYear()} Neurobyte. All rights reserved.
+    </footer>
+  );
+}
