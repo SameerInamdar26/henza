@@ -5,33 +5,38 @@ import { ArrowRight } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center text-center px-6 bg-gradient-to-br from-black via-gray-900 to-gray-950 text-white">
-      <motion.h1
-        className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 leading-tight"
-        initial={{ opacity: 0, y: -50 }}
+    <section className="min-h-[90vh] flex items-center justify-center bg-black px-6 py-20">
+      <motion.div
+        className="max-w-4xl text-center"
+        initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        Empowering the Digital Future with <span className="text-blue-500">Neurobyte</span>
-      </motion.h1>
-
-      <motion.p
-        className="text-lg sm:text-xl md:text-2xl max-w-2xl mb-8 text-gray-300"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.5, duration: 0.8 }}
-      >
-        We deliver cutting-edge IT solutions, cybersecurity expertise, and product innovation for the world’s boldest tech leaders.
-      </motion.p>
-
-      <motion.a
-        href="#services"
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-2xl text-lg transition-all duration-200 shadow-md"
-      >
-        Explore Our Solutions <ArrowRight className="w-5 h-5" />
-      </motion.a>
+        <motion.h1
+          className="text-white text-4xl md:text-6xl font-extrabold leading-tight mb-6"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
+        >
+          Powering Your Digital Future
+        </motion.h1>
+        <motion.p
+          className="text-gray-400 text-lg md:text-xl mb-8"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.4, duration: 0.5 }}
+        >
+          We deliver scalable, secure, and smart IT solutions that transform businesses globally.
+        </motion.p>
+        <motion.a
+          href="#contact"
+          className="inline-flex items-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-full transition-all duration-300"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          Get in Touch <ArrowRight className="ml-2 w-5 h-5" />
+        </motion.a>
+      </motion.div>
     </section>
   );
 }

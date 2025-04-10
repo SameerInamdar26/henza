@@ -1,61 +1,52 @@
 'use client';
 
+import { Code2, ShieldCheck, Bot } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { Code, ShieldCheck, Bot, Server } from 'lucide-react';
 
 const services = [
   {
     title: 'Custom Software Development',
-    icon: <Code className="w-8 h-8 text-blue-500" />,
-    desc: 'We design robust, scalable software tailored to your business needs using modern tech stacks.',
+    icon: <Code2 size={36} />,
+    description: 'Robust, scalable applications tailored to your business needs.',
   },
   {
-    title: 'Cybersecurity & Ethical Hacking',
-    icon: <ShieldCheck className="w-8 h-8 text-green-500" />,
-    desc: 'We secure your infrastructure with advanced penetration testing and real-time threat monitoring.',
+    title: 'Cybersecurity Solutions',
+    icon: <ShieldCheck size={36} />,
+    description: 'Cutting-edge security services to keep your data protected.',
   },
   {
-    title: 'AI Automation',
-    icon: <Bot className="w-8 h-8 text-purple-500" />,
-    desc: 'Harness AI to automate processes, analyze data, and boost operational efficiency.',
-  },
-  {
-    title: 'Cloud & DevOps Solutions',
-    icon: <Server className="w-8 h-8 text-yellow-400" />,
-    desc: 'Cloud-native solutions, CI/CD pipelines, and infrastructure automation to scale your services.',
+    title: 'AI Chatbot Integration',
+    icon: <Bot size={36} />,
+    description: 'Intelligent bots that automate and elevate customer support.',
   },
 ];
 
 export default function Services() {
   return (
-    <section className="w-full py-24 px-6 bg-zinc-950 text-white">
-      <div className="max-w-6xl mx-auto text-center">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-3xl md:text-5xl font-bold mb-8"
-        >
-          Our Core <span className="text-blue-500">Services</span>
-        </motion.h2>
+    <section id="services" className="py-24 px-6 md:px-20 bg-black text-white">
+      <motion.h2
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="text-4xl font-bold mb-12 text-center"
+      >
+        Our Services
+      </motion.h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
-          {services.map((service, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: idx * 0.1 }}
-              viewport={{ once: true }}
-              className="bg-zinc-900 rounded-2xl p-6 text-left shadow-md hover:shadow-xl hover:scale-105 transition-transform duration-300"
-            >
-              <div className="mb-4">{service.icon}</div>
-              <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-              <p className="text-zinc-400">{service.desc}</p>
-            </motion.div>
-          ))}
-        </div>
+      <div className="grid md:grid-cols-3 gap-10">
+        {services.map((service, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            className="bg-gray-900 p-6 rounded-2xl shadow-lg hover:shadow-purple-500/30 transition-shadow"
+          >
+            <div className="mb-4 text-purple-400">{service.icon}</div>
+            <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
+            <p className="text-gray-300">{service.description}</p>
+          </motion.div>
+        ))}
       </div>
     </section>
   );
